@@ -15,13 +15,24 @@ $errors = array();
 $db = mysqli_connect('penmayp50734.ipagemysql.com', 'mango_db_access', '#-mang-pass-2819-*', 'mango_screen');
 
 // REGISTER USER
-if (isset($_POST['reg_user']))
+if (isset($_POST['reg_user']) && isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
 {
   // receive all input values from the form
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+  $secret = '6LcBs3gUAAAAACnvzj9GYIWOHr4NRcSw1hqB_5GG';
+  $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+  $responseData = json_decode($verifyResponse);
+  if($responseData->success)
+  {
+      $succMsg = 'Your contact request have submitted successfully.';
+  }
+  else
+  {
+      $errMsg = 'Robot verification failed, please try again.';
+  }
 
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
@@ -63,9 +74,21 @@ if (isset($_POST['reg_user']))
 
 // ...
 // LOGIN USER
-if (isset($_POST['login_user'])) {
+if(isset($_POST['login_user']) && isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
+{
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
+      $secret = '6LcBs3gUAAAAACnvzj9GYIWOHr4NRcSw1hqB_5GG';
+      $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+      $responseData = json_decode($verifyResponse);
+      if($responseData->success)
+      {
+          $succMsg = 'Your contact request have submitted successfully.';
+      }
+      else
+      {
+          $errMsg = 'Robot verification failed, please try again.';
+      }
 
   if (empty($username)) {
   	array_push($errors, "Username is required");
