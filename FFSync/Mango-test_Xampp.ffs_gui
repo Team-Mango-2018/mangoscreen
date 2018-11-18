@@ -22,6 +22,10 @@
             <Item>\RECYCLED\</Item>
             <Item>*\desktop.ini</Item>
             <Item>*\thumbs.db</Item>
+            <Item>.git</Item>
+            <Item>*.git</Item>
+            <Item>*\.git</Item>
+            <Item>*\git</Item>
         </Exclude>
         <TimeSpan Type="None">0</TimeSpan>
         <SizeMin Unit="None">0</SizeMin>
@@ -29,8 +33,8 @@
     </Filter>
     <FolderPairs>
         <Pair>
-            <Left>C:\Penuel Files\Gitlab\NCI Year 3 - Team Project\Project Merge\mango-merge-1\jodeyne</Left>
-            <Right>C:\Penuel Files\Gitlab\NCI Year 3 - Team Project\team-mango-project\iPage ftp\mango\mango-test</Right>
+            <Left>C:\Penuel Files\Gitlab\NCI Year 3 - Team Project\Project Merge\mango-test</Left>
+            <Right>C:\xampp\htdocs\mango-test</Right>
         </Pair>
     </FolderPairs>
     <Errors Ignore="false" Retry="0" Delay="5"/>

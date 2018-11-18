@@ -42,6 +42,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <form action="login.php" method="post"> <!-- added-->
 				<?php include('errors.php'); ?> <!-- added-->
                     <input class="text email text-center" type="text" name="username" placeholder="Username" required=""> <!-- updated -->
+					<input class="text" type="password" name="password" placeholder="Password" required="">
                     <div class="wthree-text">
                         <label class="anim">
                         </label>
