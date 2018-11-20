@@ -1,10 +1,31 @@
 <?php
 
-//Changes by Penuel
-// Word replacement => a variable called "user" to "uservalidation"
-// Word replacement => a table called "users" to "user"
 
 session_start();
+
+//Changes by Penuel ; source at https://wordpress.stackexchange.com/questions/54453/functions-php-code-that-only-runs-on-localhost
+// Check if php running in local host:
+	// if php running in local host THEN change database server name to "localhost"
+	// 	ELSE server name is penmayp50734.ipagemysql.com
+
+	$host= gethostname();
+	$ip = gethostbyname($host);
+	$db_server =  substr($ip , 0, 7);  // returns the first 7 character
+
+
+	if ( $db_server == '192.168' ) {
+		$db_server_name = 'localhost';
+		$db_username = 'root' ;
+		$db_password = '';
+		$message_1 = "<p> The server is a local server </p>";
+}else{
+	$db_server_name = "penmayp50734.ipagemysql.com";
+	$db_username = "mango_db_access" ;
+	$db_password = "#-mang-pass-2819-*" ;
+	$message_1 = "<p> The server is not local </p>";
+}
+
+	echo $message_1 ;
 
 // initializing variables
 $username = "";
@@ -12,7 +33,7 @@ $email    = "";
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('penmayp50734.ipagemysql.com', 'mango_db_access', '#-mang-pass-2819-*', 'mango_screen');
+$db = mysqli_connect($db_server_name , $db_username , $db_password , 'mango_screen');
 
 // REGISTER USER
 if (isset($_POST['reg_user']) && isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
