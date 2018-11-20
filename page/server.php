@@ -43,7 +43,9 @@ if (isset($_POST['reg_user']) && isset($_POST['g-recaptcha-response']) && !empty
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+	// Re-captca Secret -- #Re-captcha
   $secret = '6LcBs3gUAAAAACnvzj9GYIWOHr4NRcSw1hqB_5GG';
+	// #Re-captcha
   $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
   $responseData = json_decode($verifyResponse);
   if($responseData->success)
