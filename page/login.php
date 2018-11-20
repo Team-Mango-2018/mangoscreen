@@ -24,6 +24,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         }
 
     </script>
+
+    <!-- Scripts for re-captcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Custom Theme files -->
     <link href="../css/loginSignup.css" rel="stylesheet" type="text/css" media="all" />
     <!-- //Custom Theme files -->
@@ -42,11 +46,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <form action="login.php" method="post"> <!-- added-->
 				<?php include('errors.php'); ?> <!-- added-->
                     <input class="text email text-center" type="text" name="username" placeholder="Username" required=""> <!-- updated -->
+                    <input class="text" type="password" name="password" placeholder="Password" required="">
                     <div class="wthree-text">
                         <label class="anim">
                         </label>
                         <div class="clear"> </div>
                     </div>
+                    <!-- Re-captch-->
+                    <div class="g-recaptcha" data-sitekey="6LcBs3gUAAAAAMJh4vb_VUOAAI9R_gFw4i4dqgwY"></div>
+                    <!-- Log-In button -->
                     <input type="submit" value="Log In" name="login_user">  <!-- updated -->
                 </form>
                 <p>Don't have an Account? <a href="signup.php"> Sign Up!</a></p>

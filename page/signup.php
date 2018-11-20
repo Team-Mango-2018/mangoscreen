@@ -22,8 +22,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
-
     </script>
+    <!-- Script for recaptcha-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
     <!-- Custom Theme files -->
     <link href="../css/loginSignup.css" rel="stylesheet" type="text/css" media="all" />
     <!-- //Custom Theme files -->
@@ -41,8 +44,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <form action="signup.php" method="post"> <!-- updated-->
                     <input class="text" type="text" name="username" placeholder="Username" required="">
                     <input class="text email" type="email" name="email" placeholder="Email" required="">
-                    <input class="text" type="password" name="password" placeholder="Password" required="">
-                    <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+                    <input class="text" type="password" name="password_1" placeholder="Password" required="">
+                    <input class="text w3lpass" type="password" name="password_2" placeholder="Confirm Password" required="">
                     <div class="wthree-text">
                         <label class="anim">
                             <input type="checkbox" class="checkbox" required="">
@@ -50,9 +53,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </label>
                         <div class="clear"> </div>
                     </div>
+                    <!-- Re-captcha -->
+                    <div class="g-recaptcha" data-sitekey="6LcBs3gUAAAAAMJh4vb_VUOAAI9R_gFw4i4dqgwY"></div>
+                    <!-- Submission button -->
                     <input type="submit" name="reg_user">
                 </form>
-                <p>Already have an account? <a href="login.html"> Login Now!</a></p>
+                <p>Already have an account? <a href="login.php"> Login Now!</a></p>
             </div>
         </div>
         <!-- copyright -->
