@@ -7,7 +7,6 @@ session_start();
 // Check if php running in local host:
 	// if php running in local host THEN change database server name to "localhost"
 	// 	ELSE server name is penmayp50734.ipagemysql.com
-
 	$host= gethostname();
 	$ip = gethostbyname($host);
 	$db_server =  substr($ip , 0, 7);  // returns the first 7 character
@@ -44,7 +43,7 @@ if (isset($_POST['reg_user']) && isset($_POST['g-recaptcha-response']) && !empty
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 	// Re-captca Secret -- #Re-captcha
-  $secret = '6LcBs3gUAAAAACnvzj9GYIWOHr4NRcSw1hqB_5GG';
+  $secret = '6LcsB3wUAAAAACAT9xjoS9FHZO1w3DYzZNxg2Y_H';
 	// #Re-captcha
   $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
   $responseData = json_decode($verifyResponse);

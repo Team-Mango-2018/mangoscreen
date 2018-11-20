@@ -54,7 +54,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="clear"> </div>
                     </div>
                     <!-- Re-captcha -->
-                    <div class="g-recaptcha" data-sitekey="6LcBs3gUAAAAAMJh4vb_VUOAAI9R_gFw4i4dqgwY"></div>
+                    <div class="g-recaptcha" data-sitekey="6LcsB3wUAAAAABKvJ0Dyu4D4eS-u_bvaPOGnDTYy"></div>
                     <!-- Submission button -->
                     <input type="submit" name="reg_user">
                 </form>
