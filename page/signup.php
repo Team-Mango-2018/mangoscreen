@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!--
 Author: Colorlib
 Author URL: https://colorlib.com
@@ -5,7 +6,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
-<?php include('server.php') ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -56,7 +57,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <!-- Re-captcha -->
                     <div class="g-recaptcha" data-sitekey="6LcsB3wUAAAAABKvJ0Dyu4D4eS-u_bvaPOGnDTYy"></div>
                     <!-- Submission button -->
-                    <input type="submit" name="reg_user">
+                    <input type="submit" name="reg_user" value="Register">
                 </form>
                 <p>Already have an account? <a href="login.php"> Login Now!</a></p>
             </div>

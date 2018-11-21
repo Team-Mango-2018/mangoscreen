@@ -1,6 +1,4 @@
 <?php
-
-
 session_start();
 
 //Changes by Penuel ; source at https://wordpress.stackexchange.com/questions/54453/functions-php-code-that-only-runs-on-localhost
@@ -23,8 +21,6 @@ session_start();
 	$db_password = "#-mang-pass-2819-*" ;
 	$message_1 = "<p> The server is not local </p>";
 }
-
-	echo $message_1 ;
 
 // initializing variables
 $username = "";
