@@ -1,6 +1,19 @@
 <?php
 session_start();
 
+//===================================//
+/*
+Changes:
+    > REPO MERGE: Jodeyne => Main
+      ^ name changes:
+          ^ tbl_images => notes_tbl
+          ^ $connect => $db
+					^ notes_tbl(name) => notes_tbl(image)
+
+*/
+// ===========================//
+
+
 //Changes by Penuel ; source at https://wordpress.stackexchange.com/questions/54453/functions-php-code-that-only-runs-on-localhost
 // Check if php running in local host:
 	// if php running in local host THEN change database server name to "localhost"
@@ -9,18 +22,17 @@ session_start();
 	$ip = gethostbyname($host);
 	$db_server =  substr($ip , 0, 7);  // returns the first 7 character
 
-
 	if ( $db_server == '192.168' ) {
 		$db_server_name = 'localhost';
 		$db_username = 'root' ;
 		$db_password = '';
 		$message_1 = "<p> The server is a local server </p>";
-}else{
-	$db_server_name = "penmayp50734.ipagemysql.com";
-	$db_username = "mango_db_access" ;
-	$db_password = "#-mang-pass-2819-*" ;
-	$message_1 = "<p> The server is not local </p>";
-}
+	}else{
+		$db_server_name = "penmayp50734.ipagemysql.com";
+		$db_username = "mango_db_access" ;
+		$db_password = "#-mang-pass-2819-*" ;
+		$message_1 = "<p> The server is not local </p>";
+	}
 
 // initializing variables
 $username = "";
@@ -127,6 +139,22 @@ if(isset($_POST['login_user']) && isset($_POST['g-recaptcha-response']) && !empt
   		array_push($errors, "Wrong username/password combination");
   	}
   }
+}
+
+//Upload Images
+		// #ref_help https://www.codexworld.com/store-retrieve-image-from-database-mysql-php/
+		//#replacement $connect to $db || #replacement notes_tbl(name) => notes_tbl(image)
+if(isset($_POST["insert"]))
+{  if(!empty($_FILES['image']['tmp_name'])
+		&& file_exists($_FILES['image']['tmp_name']))
+		{
+			 $file= addslashes(file_get_contents($_FILES['image']['tmp_name']));
+			 $query = "INSERT INTO notes_tbl(image) VALUES ('$file')";
+			 if(mysqli_query($db, $query))
+			 {
+				 echo '<script>alert("Image Inserted into Database")</script>';
+			 }
+		 }
 }
 
 ?>

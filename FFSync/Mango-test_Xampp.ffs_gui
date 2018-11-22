@@ -26,6 +26,8 @@
             <Item>*.git</Item>
             <Item>*\.git</Item>
             <Item>*\git</Item>
+            <Item>*\ffsync</Item>
+            <Item>\ffsync</Item>
         </Exclude>
         <TimeSpan Type="None">0</TimeSpan>
         <SizeMin Unit="None">0</SizeMin>

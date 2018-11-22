@@ -1,18 +1,38 @@
-<?php  
- $connect = mysqli_connect("localhost", "root", "", "testing");  
- if(isset($_POST["insert"]))  
- {  if(!empty($_FILES['image']['tmp_name']) 
-     && file_exists($_FILES['image']['tmp_name'])) {
-    $file= addslashes(file_get_contents($_FILES['image']['tmp_name']));
+<?php include('server.php') ?>
 
-     
-      $query = "INSERT INTO tbl_images(name) VALUES ('$file')";  
-      if(mysqli_query($connect, $query))  
-      {  
-           echo '<script>alert("Image Inserted into Database")</script>';  
-      }  
- }  
- }
+<?php
+//=================================//
+/*
+Changes:
+    > REPO MERGE: Jodeyne => Main
+      ^ name changes:
+          ^ tbl_images => notes_tbl
+          ^ $connect => $db
+
+*/
+//===============================//
+
+//no need !!!
+/*
+    $connect = mysqli_connect("localhost", "root", "", "testing");
+*/
+
+ //Upload Image function
+    /*
+        if(isset($_POST["insert"]))
+        {  if(!empty($_FILES['image']['tmp_name'])
+            && file_exists($_FILES['image']['tmp_name']))
+        {
+             $file= addslashes(file_get_contents($_FILES['image']['tmp_name']));
+             $query = "INSERT INTO tbl_images(name) VALUES ('$file')";
+             if(mysqli_query($connect, $query))
+             {
+               echo '<script>alert("Image Inserted into Database")</script>';
+             }
+           }
+        }
+    */
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -117,15 +137,18 @@
     <section id="notes" class="projects-section bg-light">
         <div class="container">
 
-            <!-- Featured Project Row -->
+            <!--Use Case: Upload Notes-->
+              <!-- Featured Project Row -->
             <div class="row align-items-center no-gutters mb-4 mb-lg-5">
                 <div class="col-xl-8 col-lg-7">
                     <form method="post" enctype="multipart/form-data">
+                        <!-- Button to selcet image-->
                         <input type="file" name="image" id="image" />
                         <br />
+                        <!-- POST -->
+                            <!--Button to upload image to database -->
                         <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-info" />
                     </form>
-
                 </div>
 
                 <div class="col-xl-4 col-lg-5">
@@ -141,22 +164,25 @@
                     <div>
                         <h1>Notes</h1>
                     </div>
-                    <?php  
-                $query = "SELECT * FROM tbl_images ORDER BY id DESC";  
-                $result = mysqli_query($connect, $query);  
-                while($row = mysqli_fetch_array($result))  
-                {  
-                     echo '  
-                          <tr>  
-                               <td>  
-                                    <img src="data:image/jpeg;base64,'.base64_encode($row['name'] ).'" height="200" width="200" class="img-thumnail" />  
-                               </td>  
-                          </tr>  
-                     ';  
-                }  
+
+                <!-- Querying all the images and displays all the images -->
+                  <?php
+                      // #replacement id => notes_id
+                      $query = "SELECT * FROM notes_tbl ORDER BY notes_id DESC";
+                      $result = mysqli_query($db, $query);
+                      while($row = mysqli_fetch_array($result))
+                      {
+                           echo '
+                                <tr>
+                                     <td>
+                                          <img src="data:image/jpeg;base64,'.base64_encode($row['name'] ).'" height="200" width="200" class="img-thumnail" />
+                                     </td>
+                                </tr>
+                           ';
+                      }
                 ?>
                 </table>
-           
+
             </div>
                 </div>
 
