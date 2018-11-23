@@ -1,0 +1,2 @@
+Error#1
+ 	>  Undefined index: name in C:\xampp\htdocs\mango-test\page\user.php on line 178

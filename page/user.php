@@ -172,9 +172,11 @@ Changes:
                       $result = mysqli_query($db, $query);
                       while($row = mysqli_fetch_array($result))
                       {
+                          // !!! Line
                            echo '
                                 <tr>
                                      <td>
+
                                           <img src="data:image/jpeg;base64,'.base64_encode($row['name'] ).'" height="200" width="200" class="img-thumnail" />
                                      </td>
                                 </tr>
