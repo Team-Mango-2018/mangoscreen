@@ -3,9 +3,22 @@ Error#1 [FIXED]
 	> FIXED
 		> Just changed the 'name' to 'image'
 
-Error#2 
+Error#2 [FIXED]
 	> When user.php is run...
 		> Error_Messsages: 
 			> Warning: mysqli_query(): MySQL server has gone away in C:\xampp\htdocs\mango-test\page\server.php on line 153
 			> Warning: mysqli_query(): Error reading result set's header in C:\xampp\htdocs\mango-test\page\server.php on line 153
 			> Warning: mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in C:\xampp\htdocs\mango-test\page\user.php on line 174
+	> FIXED
+		> Its a MySQL Local Server.
+		> Go to the my.cf file of mysql:
+			^ C:\xampp\mysql\bin\my.init
+		> And then simply change the following value:
+			wait_timeout = 600
+			max_allowed_packet = 64M
+		> REFERENCE
+			> https://stackoverflow.com/questions/12425287/mysql-server-has-gone-away-when-importing-large-sql-file
+			> https://matomo.org/faq/troubleshooting/faq_183/ 
+			> https://dev.mysql.com/doc/refman/8.0/en/gone-away.html 
+		
+		
