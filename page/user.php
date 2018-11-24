@@ -170,20 +170,14 @@ Changes:
                       // #replacement id => notes_id
                       $query = "SELECT * FROM notes_tbl ORDER BY notes_id DESC";
                       $result = mysqli_query($db, $query);
-                      //$row =  mysqli_fetch_array($result);
-
-                      // !!!Error Message test #temp_test
-                      echo "Error Message Test <br>";
-                      var_dump(isset($row));
 
                       while($row = mysqli_fetch_array($result))
                       {
-                          // !!! Line
                            echo '
                                 <tr>
                                      <td>
 
-                                          <img src="data:image/jpeg;base64,'.base64_encode($row['name'] ).'" height="200" width="200" class="img-thumnail" />
+                                          <img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'" height="200" width="200" class="img-thumnail" />
                                      </td>
                                 </tr>
                            ';

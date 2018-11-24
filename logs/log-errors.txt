@@ -1,2 +1,4 @@
-Error#1
+Error#1 [FIXED]
  	>  Undefined index: name in C:\xampp\htdocs\mango-test\page\user.php on line 178
+	>FIX
+		> Just changed the 'name' to 'image'
