@@ -47,7 +47,11 @@ if (isset($_POST['reg_user']) && isset($_POST['g-recaptcha-response']) && !empty
 {
   // receive all input values from the form
   $username = mysqli_real_escape_string($db, $_POST['username']);
+	$fname = mysqli_real_escape_string($db, $_POST['fname']);
+	$lname = mysqli_real_escape_string($db, $_POST['lname']);
   $email = mysqli_real_escape_string($db, $_POST['email']);
+	$university = mysqli_real_escape_string($db, $_POST{'university'});
+	$course = mysqli_real_escape_string($db, $_POST{'course'});
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 	// Re-captca Secret -- #Re-captcha
@@ -67,7 +71,11 @@ if (isset($_POST['reg_user']) && isset($_POST['g-recaptcha-response']) && !empty
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) { array_push($errors, "Username is required"); }
+	if (empty($fname)) { array_push($errors, "Enter your first name"); }
+ 	if (empty($lname)) { array_push($errors, "Enter your last name"); }
   if (empty($email)) { array_push($errors, "Email is required"); }
+	if (empty($university)) { array_push($errors, "Enter you University name"); }
+	if (empty($course)) { array_push($errors, "Enter the course you are studying"); }
   if (empty($password_1)) { array_push($errors, "Password is required"); }
   if ($password_1 != $password_2) {
 	array_push($errors, "The two passwords do not match");
@@ -93,8 +101,8 @@ if (isset($_POST['reg_user']) && isset($_POST['g-recaptcha-response']) && !empty
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO user (username, email, password)
-  			  VALUES('$username', '$email', '$password')";
+  	$query = "INSERT INTO user (username, fname, lname, email, university, course, password)
+  			  VALUES('$username', '$fname', '$lname', '$email', '$university', '$course', '$password')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
