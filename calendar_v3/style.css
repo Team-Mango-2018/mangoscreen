@@ -1,0 +1,35 @@
+
+body{
+  font-family: 'Raleway', sans-serif;
+  background-color: #F59B73;
+  color: white;
+}
+
+a{
+  color: white;
+}
+
+.fc-state-disabled{
+  background-color: #F59B73;
+}
+
+.fc-state-default{
+  background-color: #F59B73 ;
+    color: white;
+}
+
+.fc-unthemed td.fc-today{
+  color: #F59B73;
+  background: white;
+}
+.fc-icon{
+    color: #F59B73;
+}
+
+.fc-h-event{
+  background-color: #FF3F56;
+}
+
+.fc-time-grid-event{
+  background-color: #FF3F56;
+}

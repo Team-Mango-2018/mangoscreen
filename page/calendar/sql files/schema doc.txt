@@ -1,0 +1,10 @@
+List of attributes:
+
+   > id (auto-increment)
+         change to cal_id
+   > title (string)
+   > start_event (date)
+   >  end_event (date)
+
+Added
+   >
