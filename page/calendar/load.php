@@ -6,7 +6,7 @@ $connect = new PDO('mysql:host=localhost;dbname=mango_screen', 'root', '');
 
 $data = array();
 
-$query = "SELECT * FROM events ORDER BY id";
+$query = "SELECT * FROM user_cal_item ORDER BY cal_id";
 
 $statement = $connect->prepare($query);
 
@@ -17,7 +17,7 @@ $result = $statement->fetchAll();
 foreach($result as $row)
 {
  $data[] = array(
-  'id'   => $row["id"],
+  'id'   => $row["cal_id"],
   'title'   => $row["title"],
   'start'   => $row["start_event"],
   'end'   => $row["end_event"]

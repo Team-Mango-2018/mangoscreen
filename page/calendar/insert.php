@@ -7,7 +7,7 @@ $connect = new PDO('mysql:host=localhost;dbname=mango_screen', 'root', '');
 if(isset($_POST["title"]))
 {
  $query = "
- INSERT INTO events
+ INSERT INTO user_cal_item
  (title, start_event, end_event)
  VALUES (:title, :start_event, :end_event)
  ";
