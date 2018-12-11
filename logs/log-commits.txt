@@ -11,3 +11,5 @@
 > #6 pre-change commits -- before merging with rehan
 
 > #7 pre-mergre -- before merging with jodeyne
+
+>#8 pre-change -- manual merge with jodeyne
