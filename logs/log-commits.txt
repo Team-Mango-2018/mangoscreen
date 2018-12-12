@@ -11,3 +11,5 @@
 > #6 pre-change -- just created new branch called calendar
 
 > #7 pre-change -- I will now attempt to implement a multi-user 
+
+> #8 pre-merge -- commits before merging with branch main .
