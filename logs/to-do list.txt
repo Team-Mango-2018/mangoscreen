@@ -1,0 +1,9 @@
+On the calendar folders:
+	Add another attributes  when inserting a new calendar item to the database
+		Whereby the attributes is the username
+			Get the username from the session
+
+	Load:
+		> Only display the calendar item for that particular user 
+		
+		
