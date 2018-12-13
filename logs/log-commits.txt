@@ -13,3 +13,8 @@
 > #7 pre-mergre -- before merging with jodeyne
 
 >#8 pre-change -- manual merge with jodeyne
+
+------
+
+#9
+pre-merge -- commits before merging with branch calendar
