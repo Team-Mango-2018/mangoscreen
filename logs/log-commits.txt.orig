@@ -20,20 +20,4 @@
 > #7 pre-mergre -- before merging with jodeyne
 
 >#8 pre-change -- manual merge with jodeyne
-<<<<<<< HEAD
-
-------
-
-#9
-pre-merge -- commits before merging with branch calendar
-=======
 >>>>>>> 3888b69a696a8012fa579a8c323cdaa78e381e22
-
-> #9 pre-change -- before changing the files on the calendar folder.
-
-------------------
->#10
-
-git commit -am "post-change -- its Working : finally individual user can now use the calendar individually"
-
->>>>>>> calendar

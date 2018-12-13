@@ -1,0 +1,9 @@
+List of attributes:
+
+   > id (auto-increment)
+   > title (string)
+   > start_event (date)
+   >  end_event (date)
+
+Added
+   > 

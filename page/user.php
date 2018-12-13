@@ -1,4 +1,7 @@
-<?php include('server.php') ?>
+<?php
+   //include('server.php');
+   include('session.php');
+?>
 
 <?php
 //=================================//
@@ -32,7 +35,6 @@ Changes:
            }
         }
     */
-
  ?>
 <!DOCTYPE html>
 <html lang="en">
