@@ -21,3 +21,5 @@
 
 >#8 pre-change -- manual merge with jodeyne
 >>>>>>> 3888b69a696a8012fa579a8c323cdaa78e381e22
+
+> #9 pre-change -- before changing the files on the calendar folder.
