@@ -37,3 +37,8 @@ pre-merge -- commits before merging with branch calendar
 git commit -am "post-change -- its Working : finally individual user can now use the calendar individually"
 
 >>>>>>> calendar
+
+------------
+#11
+
+git commit -am "post-merge -- commits after merging with calendar, its fully working"
