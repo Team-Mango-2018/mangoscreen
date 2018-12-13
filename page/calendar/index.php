@@ -2,6 +2,9 @@
 //index.php
 
    //php variable name change id => cal_id
+
+   include('../session.php');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,14 +38,16 @@
      {
       var start = $.fullCalendar.formatDate(start, "Y-MM-DD HH:mm:ss");
       var end = $.fullCalendar.formatDate(end, "Y-MM-DD HH:mm:ss");
+      var user_id = <?php echo json_encode($sesh_user , JSON_HEX_TAG); ?> ;
       $.ajax({
        url:"insert.php",
        type:"POST",
-       data:{title:title, start:start, end:end},
+       data:{title:title, start:start, end:end, user_id:user_id},
+
        success:function()
        {
         calendar.fullCalendar('refetchEvents');
-        alert("Added Successfully");
+        alert("Added Successfully " + title + " " + user);
        }
       })
      }
@@ -54,6 +59,7 @@
      var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD HH:mm:ss");
      var title = event.title;
      var id = event.id;
+
      $.ajax({
       url:"update.php",
       type:"POST",

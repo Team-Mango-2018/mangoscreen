@@ -57,6 +57,7 @@ CREATE TABLE `user_cal_item`(
    `title` longtext,
    `start_event` datetime,
    `end_event` datetime,
+   `user_id` longtext,
     PRIMARY KEY (`cal_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
