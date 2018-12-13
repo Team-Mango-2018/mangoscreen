@@ -1,4 +1,5 @@
 <?php
+include('../session.php');
 
 //load.php
 
@@ -6,7 +7,7 @@ $connect = new PDO('mysql:host=localhost;dbname=mango_screen', 'root', '');
 
 $data = array();
 
-$query = "SELECT * FROM user_cal_item ORDER BY cal_id";
+$query = "SELECT * FROM user_cal_item WHERE user_id='$sesh_user' ORDER BY cal_id";
 
 $statement = $connect->prepare($query);
 

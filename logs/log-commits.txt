@@ -23,3 +23,9 @@
 >>>>>>> 3888b69a696a8012fa579a8c323cdaa78e381e22
 
 > #9 pre-change -- before changing the files on the calendar folder.
+
+------------------
+>#10
+
+git commit -am "post-change -- its Working : finally individual user can now use the calendar individually"
+

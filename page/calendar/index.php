@@ -3,7 +3,7 @@
 
    //php variable name change id => cal_id
 
-   include('../session.php');
+   include('session.php');
 
 ?>
 <!DOCTYPE html>
