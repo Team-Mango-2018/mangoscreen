@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `username` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `college` longtext,
+  `university` longtext,
   `course` longtext,
   `fname` longtext,
   `lname` longtext,
