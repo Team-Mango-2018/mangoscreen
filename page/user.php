@@ -192,6 +192,9 @@ Changes:
 
     </section>
 
+    <br>
+         <button type="button"  onclick="location.href='calendar/index.php'"> <h1>Go to calendar</h1> </button>
+    <br>
 
     <section id="career" class="signup-section">
         <div class="container">
