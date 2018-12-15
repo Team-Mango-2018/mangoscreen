@@ -62,6 +62,17 @@ CREATE TABLE `user_cal_item`(
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
+USE mango_screen ;
+DROP TABLE IF EXISTS gallery ;
+CREATE TABLE `gallery`(
+   `titleGallery`    LONGTEXT,
+   `descGallery`     LONGTEXT,
+   `imgFullNameGallery` LONGTEXT,
+   `orderGallery`     INTEGER  NOT NULL AUTO_INCREMENT,
+    PRIMARY KEY (`orderGallery`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
 --
 -- Dumping data for table `user`
 --

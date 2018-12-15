@@ -3,7 +3,7 @@ include('../session.php');
 
 //load.php
 
-$connect = new PDO('mysql:host=localhost;dbname=mango_screen', 'root', '');
+$connect = new PDO('mysql:host=penmayp50734.ipagemysql.com;dbname=mango_screen', 'mango_db_access', '#-mang-pass-2819-*');
 
 $data = array();
 

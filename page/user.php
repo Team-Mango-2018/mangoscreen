@@ -1,7 +1,5 @@
-<?php
-   //include('server.php');
-   include('session.php');
-?>
+<?php include('server.php')?>
+
 
 <?php
 //=================================//
@@ -136,61 +134,52 @@ Changes:
     </section>
 
     <!-- notes Section -->
-    <section id="notes" class="projects-section bg-light">
-        <div class="container">
+    <section class="gallery-links">
+      <div class="wrapper">
+        <h2>notes</h2>
 
-            <!--Use Case: Upload Notes-->
-              <!-- Featured Project Row -->
-            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                <div class="col-xl-8 col-lg-7">
-                    <form method="post" enctype="multipart/form-data">
-                        <!-- Button to selcet image-->
-                        <input type="file" name="image" id="image" />
-                        <br />
-                        <!-- POST -->
-                            <!--Button to upload image to database -->
-                        <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-info" />
-                    </form>
-                </div>
+        <div class="gallery-container">
+          <?php
+          include_once 'includes/dbh.inc.php';
 
-                <div class="col-xl-4 col-lg-5">
-                    <div class="featured-text text-center text-lg-left">
+          $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC";
+          $stmt = mysqli_stmt_init($conn);
+          if (!mysqli_stmt_prepare($stmt, $sql)) {
+            echo "SQL Statement Failed!";
+          }else {
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
 
-                    </div>
-                </div>
-            </div>
+            while ($row = mysqli_fetch_assoc($result)) {
+              echo '<a href="#">
+                <div style="background-image:url(img/gallery/'.$row["imgFullNameGallery"].');"></div>
+                <h3>'.$row["titleGallery"].'</h3>
+                <p>'.$row["descGallery"].'</p>
+              </a>';
+            }
+          }
 
-            <!-- Notes Row -->
-                <div class="carouselGallery-grid hidden-xs">
-                <table class="carouselGallery-col-1 carouselGallery-carousel">
-                    <div>
-                        <h1>Notes</h1>
-                    </div>
+          ?>
+        </div>
 
-                <!-- Querying all the images and displays all the images -->
-                  <?php
-                      // #replacement id => notes_id
-                      $query = "SELECT * FROM notes_tbl ORDER BY notes_id DESC";
-                      $result = mysqli_query($db, $query);
-
-                      while($row = mysqli_fetch_array($result))
-                      {
-                           echo '
-                                <tr>
-                                     <td>
-
-                                          <img src="data:image/jpeg;base64,'.base64_encode($row['image'] ).'" height="200" width="200" class="img-thumnail" />
-                                     </td>
-                                </tr>
-                           ';
-                      }
-                ?>
-                </table>
-
-            </div>
-                </div>
-
+        <?php
+        if (isset($_SESSION['username'])) {
+          echo '<div class="gallery-upload">
+          <h2>Upload</h2>
+            <form  action="includes/notes.upload.inc.php" method="post" enctype="multipart/form-data">
+              <input type="text" name="filename" placeholder="File Name...">
+              <input type="text" name="filetitle" placeholder="Image Title...">
+              <input type="text" name="filedesc" placeholder="Image description...">
+              <input type="file" name="file">
+              <button type="submit" name="submit">Upload</button>
+            </form>
+          </div>';
+        }
+        ?>
+      </div>
     </section>
+
+
 
 
     <section id="career" class="signup-section">
@@ -246,7 +235,7 @@ Changes:
                         <div class="card-body text-center">
                             <i class="fas fa-mobile-alt text-primary mb-2"></i>
                             <h4 class="text-uppercase m-0">Phone</h4>
-                            <hr class="my-4">
+                         <hr class="my-4">
                             <div class="small text-black-50">+1 (555) 902-8832</div>
                         </div>
                     </div>
@@ -286,25 +275,7 @@ Changes:
     <script src="../js/grayscale.min.js"></script>
     <script src="../js/grayscale.js"></script>
     <script src="../js/js.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#insert').click(function() {
-                var image_name = $('#image').val();
-                if (image_name == '') {
-                    alert("Please Select Image");
-                    return false;
-                } else {
-                    var extension = $('#image').val().split('.').pop().toLowerCase();
-                    if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
-                        alert('Invalid Image File');
-                        $('#image').val('');
-                        return false;
-                    }
-                }
-            });
-        });
 
-    </script>
 
     <script src="../js/main.js"></script>
         </body>
