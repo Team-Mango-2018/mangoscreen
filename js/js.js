@@ -3,7 +3,7 @@ function start(){
     newQuote();
     startTime();
     checkTime();
-    
+
 }
         <!--Script for the time-->
         function startTime() {
@@ -46,10 +46,10 @@ var quotes =[
     'Don\'t wait. The time will never be just right. <br>- Napoleon Hill',
     'Some people look for a beautiful place. Others make a place beautiful.  <br>- Hazrat Inayat Khan',
     'OO alam ko pogi ako  <br>- Jodeyne Teneza',
-    
 
-    
-    
+
+
+
 ]
 
 function newQuote(){
