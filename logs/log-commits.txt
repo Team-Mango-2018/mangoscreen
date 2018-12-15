@@ -40,5 +40,8 @@ git commit -am "post-change -- its Working : finally individual user can now use
 
 ------------
 #11
-
 git commit -am "post-merge -- commits after merging with calendar, its fully working"
+
+----------
+#12
+git commit -am "Pre-merge-isolation -- creating new branch called merge_branch_1, Merging jodeyne & main"
