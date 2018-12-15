@@ -94,13 +94,14 @@ Changes:
             <div class="col" id="mid">
                 calendar here
             </div>
-            <div class="col-5" id="mid">
+            <div class="col-5" id="mid"  style="background-color: rgb(0, 100, 0,0.3);" >
                 <div>
                     <h1 id="time"></h1>
                 </div>
                 <div>
                     <h1 class="greeting"></h1>
                 </div>
+                <br>
                 <div>
                     <h2 class="text-white-50 mx-auto mt-2 mb-5" id="quoteDisplay"></h2>
                 </div>
@@ -120,7 +121,7 @@ Changes:
     </header>
 
     <!-- Calendar -->
-    
+
     <!-- notes Section -->
     <section class="gallery-links">
       <div class="wrapper">
