@@ -43,8 +43,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="main-agileinfo">
             <div class="agileits-top">
                 <form action="signup.php" method="post"> <!-- updated-->
-                    <input class="text" type="text" name="username" placeholder="Username" required="">
+                    <input class="text" type="text" name="username" placeholder="Username" required=""></br>
+                    <input class="text" type="text" name="fname" placeholder="First Name" required="">
+                    <input class="text" type="text" name="lname" placeholder="Last Name" required="">
                     <input class="text email" type="email" name="email" placeholder="Email" required="">
+                    <input class="text" type="text" name="university" placeholder="University" required="">
+                    <input class="text" type="text" name="course" placeholder="Course" required=""></br>
                     <input class="text" type="password" name="password_1" placeholder="Password" required="">
                     <input class="text w3lpass" type="password" name="password_2" placeholder="Confirm Password" required="">
                     <div class="wthree-text">

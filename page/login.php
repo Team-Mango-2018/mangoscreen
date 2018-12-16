@@ -1,4 +1,6 @@
-<?php include('server.php') ?>
+<?php include('server.php');?>
+
+
 <!--
 Author: Colorlib
 Author URL: https://colorlib.com

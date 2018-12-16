@@ -1,0 +1,31 @@
+Background for the greenish UI:
+
+background: linear-gradient(to top, #76b852, #ffcd48);
+background-color: rgba(0, 0, 0, 0);
+background-position-x: 0%;
+background-position-y: 0%;
+background-repeat: repeat;
+background-attachment: scroll;
+background-image: linear-gradient(to top, rgb(118, 184, 82), rgb(255, 205, 72));
+background-size: auto auto;
+background-origin: padding-box;
+background-clip: border-box;
+
+================
+
+grayscale.css : 112
+
+   -webkit-text-fill-color: white;
+
+===================
+
+inline on user.php
+
+   the div after <calendar>
+   background-color: rgb(0, 100, 0,0.3);
+
+
+=============
+Calendar background
+
+background-color: rgb(135, 206, 131);

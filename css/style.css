@@ -51,7 +51,7 @@ form button {
 
 /*first row in heading*/
 #mid {
-    padding-top: 200px;
+    padding-top: 120px;
 }
 
 #headrow {}
@@ -258,6 +258,6 @@ input {
 }
 
 .gallery-upload {
-    background-color: grey;
+    background-color: rgba(76, 189, 102, 0.87);
     justify-items: center;
 }

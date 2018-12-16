@@ -1,16 +1,21 @@
-<?php
-  session_start();
+<?php include('server.php');
 
+   if (isset($_SESSION['username'])) {
+       header("location: user.php");
+    }
 	//If user not logged in
-  if (!isset($_SESSION['username'])) {
-     	$_SESSION['msg'] = "You must log in first";
-  	header("location: login.php");
-   }
-  if (isset($_GET['logout'])) {
-  	session_destroy();
-  	unset($_SESSION['username']);
-  	header("location: login.php");
-  }
+
+      /*
+     if (!isset($_SESSION['username'])) {
+        	$_SESSION['msg'] = "You must log in first";
+     	header("location: login.php");
+      }
+     if (isset($_GET['logout'])) {
+     	session_destroy();
+     	unset($_SESSION['username']);
+     	header("location: login.php");
+     }
+    */
 ?>
 
 
@@ -70,11 +75,14 @@
     <header class="masthead">
         <div class="container d-flex h-100 align-items-center">
             <div class="mx-auto text-center">
+               <br>
                 <h1 id="time"></h1>
                 <br>
+                  <h1  style="color: white;"> MangoScreen </h1>
+                  <h2 style="color: white;"> We aim to keep you on track to your future </h2>
+                <!-- <h1 class="greeting"></h1> -->
                 <br>
-                <h1 class="greeting"></h1>
-                <br>
+
                 <br>
                 <br>
                 <br>
@@ -93,40 +101,9 @@
 
             <div class="row">
 
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Address</h4>
-                            <hr class="my-4">
-                            <div class="small text-black-50">4923 Market Street, Orlando FL</div>
-                        </div>
-                    </div>
-                </div>
+                  <h2> Zuha | Penuel | Jodeyne | Rehan </h2>
 
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-envelope text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Email</h4>
-                            <hr class="my-4">
-                            <div class="small text-black-50">
-                                <a href="#">hello@yourdomain.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Phone</h4>
-                            <hr class="my-4">
-                            <div class="small text-black-50">+1 (555) 902-8832</div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="social d-flex justify-content-center">

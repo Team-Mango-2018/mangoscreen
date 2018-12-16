@@ -93,8 +93,8 @@ if (isset($_POST['reg_user']) && isset($_POST['g-recaptcha-response']) && !empty
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO user (username, email, password)
-  			  VALUES('$username', '$email', '$password')";
+  	$query = "INSERT INTO user (username,fname, lname, email, university, course, password)
+  		  			  VALUES('$username', '$fname', '$lname', '$email', '$university', '$course', '$password')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
@@ -135,6 +135,8 @@ if(isset($_POST['login_user']) && isset($_POST['g-recaptcha-response']) && !empt
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
 	  $_SESSION['password'] = $password;
+	   $_SESSION['fname']= $row["fname"];
+		$fname = $row["fname"];
   	  header('location: user.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
