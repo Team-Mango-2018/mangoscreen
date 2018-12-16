@@ -97,7 +97,7 @@ Changes:
                     <h1 id="time"></h1>
                 </div>
                 <div>
-                    <h1 class="greeting"></h1>
+                    <h1 class="greeting"> </h1>
                 </div>
                 <br>
                 <div>

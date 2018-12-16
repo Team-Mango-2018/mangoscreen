@@ -135,6 +135,8 @@ if(isset($_POST['login_user']) && isset($_POST['g-recaptcha-response']) && !empt
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
 	  $_SESSION['password'] = $password;
+	   $_SESSION['fname']= $row["fname"];
+		$fname = $row["fname"];
   	  header('location: user.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
