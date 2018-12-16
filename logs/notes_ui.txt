@@ -23,4 +23,9 @@ inline on user.php
 
    the div after <calendar>
    background-color: rgb(0, 100, 0,0.3);
-   
+
+
+=============
+Calendar background
+
+background-color: rgb(135, 206, 131);

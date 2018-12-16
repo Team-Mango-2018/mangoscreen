@@ -1,5 +1,4 @@
-<?php include('server.php')?>
-
+<?php include('session.php') ?>
 
 <?php
 //=================================//
@@ -78,10 +77,9 @@ Changes:
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <a class="nav-link js-scroll-trigger" href="#calendar">Calendar</a>
-                    <a class="nav-link js-scroll-trigger" href="#notes">Notes</a>
-                    <a class="nav-link js-scroll-trigger" href="#events">Events</a>
-                    <a class="nav-link js-scroll-trigger" href="#career">Careers</a>
+                    <a class="nav-link js-scroll-trigger" href="calendar/index.php">Calendar</a>
+                    <a class="nav-link js-scroll-trigger" href="#notes_scroll">Notes</a>
+                    <a class="nav-link js-scroll-trigger" href="logout.php">Log Out</a>
 
                 </ul>
             </div>
@@ -92,7 +90,7 @@ Changes:
     <header class="masthead">
         <div class="row" id="headrow">
             <div class="col" id="mid">
-                calendar here
+
             </div>
             <div class="col-5" id="mid"  style="background-color: rgb(0, 100, 0,0.3);" >
                 <div>
@@ -123,11 +121,11 @@ Changes:
     <!-- Calendar -->
 
     <!-- notes Section -->
-    <section class="gallery-links">
-      <div class="wrapper">
+    <section class="gallery-links" id="notes_scroll">
+      <div class="wrapper" style ="background-color: rgba(148, 252, 117, 0.6);">
         <h2>notes</h2>
 
-        <div class="gallery-container">
+        <div class="gallery-container" style="background-color: rgba(177,209,77,0.8);">
           <?php
           include_once 'includes/dbh.inc.php';
 
@@ -149,6 +147,8 @@ Changes:
           }
 
           ?>
+         <br>
+         <br>
         </div>
 
         <?php
@@ -177,12 +177,9 @@ Changes:
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
 
                     <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                    <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                    <h2 class="text-white mb-5">Team Mango is dedicated to keeping students on track</h2>
+                    <h2 style = "color:white;"> Penuel | Zuha | Jodeyne | Rehan</h2>
 
-                    <form class="form-inline d-flex">
-                        <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-                        <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-                    </form>
 
                 </div>
             </div>
@@ -195,41 +192,6 @@ Changes:
 
             <div class="row">
 
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Address</h4>
-                            <hr class="my-4">
-                            <div class="small text-black-50">4923 Market Street, Orlando FL</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-envelope text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Email</h4>
-                            <hr class="my-4">
-                            <div class="small text-black-50">
-                                <a href="#">hello@yourdomain.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Phone</h4>
-                         <hr class="my-4">
-                            <div class="small text-black-50">+1 (555) 902-8832</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="social d-flex justify-content-center">
                 <a href="#" class="mx-2">

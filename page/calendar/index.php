@@ -112,8 +112,10 @@
 
   </script>
  </head>
- <body>
+ <body style="background-color: rgb(135, 206, 131)">
   <br />
+
+  <h3 align="center"><a href="../user.php"> HOME  </a></h3>
   <h2 align="center"><a href="#"> My Calendar </a></h2>
   <br />
   <div class="container">
