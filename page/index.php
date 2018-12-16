@@ -75,6 +75,8 @@
     <header class="masthead">
         <div class="container d-flex h-100 align-items-center">
             <div class="mx-auto text-center">
+               <div class="pen-space" style="margin-top:150px">
+               </div>
                <br>
                 <h1 id="time"></h1>
                 <br>
@@ -98,7 +100,7 @@
     <!-- Contact Section -->
     <section class="contact-section bg-black">
         <div class="container">
-
+            <br> <br> <br>
             <div class="row">
 
                   <h2> Zuha | Penuel | Jodeyne | Rehan </h2>
@@ -106,17 +108,6 @@
 
             </div>
 
-            <div class="social d-flex justify-content-center">
-                <a href="#" class="mx-2">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="mx-2">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="mx-2">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
 
         </div>
     </section>
