@@ -42,7 +42,7 @@
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: rgb(1, 129, 3);;
+    background: linear-gradient(to top, #76b852, #ffcd48);
     -webkit-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
   }
@@ -128,6 +128,7 @@
   .masthead h1 {
     font-size: 4rem;
     line-height: 4rem;
+    text-align: center;
   }
 }
 
@@ -140,6 +141,7 @@
     font-size: 3.5rem;
     line-height: 6.5rem;
     letter-spacing: 0.8rem;
+    text-align: center;
   }
   .masthead h2 {
     max-width: 30rem;

@@ -121,9 +121,6 @@
   <div class="container">
    <div id="calendar"></div>
   </div>
-     <br>
-      <a href="logout.php"> <h1 style="color: black; background-color:yellow;">Log-Out</h1> </a>
-      <br>
  </body>
 
 

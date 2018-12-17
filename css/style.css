@@ -7,6 +7,9 @@ and open the template in the editor.
     Created on : 20-Sep-2018, 16:22:34
     Author     : jodey
 */
+section{
+background: linear-gradient(to bottom, #76b852, #ffcd48);
+}
 
 ::-webkit-input-placeholder {
     color: #fff;
@@ -51,7 +54,7 @@ form button {
 
 /*first row in heading*/
 #mid {
-    padding-top: 120px;
+    padding-top: 200px;
 }
 
 #headrow {}
@@ -213,10 +216,11 @@ input {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    background: linear-gradient(to bottom, #76b852, #ffcd48);
 }
 
 .gallery-links h2 {
-    font-family: Catamaran;
+    vertical-align: middle;
     font-size: 28px;
     font-weight: 600;
     color: #111;
@@ -225,7 +229,6 @@ input {
 }
 
 .gallery-container a h3 {
-    font-family: Catamaran;
     font-size: 20px;
     font-weight: 700;
     color: #111;
@@ -240,8 +243,7 @@ input {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-
+    margin-top: 50px;
 }
 
 .gallery-container a:hover {
@@ -258,6 +260,17 @@ input {
 }
 
 .gallery-upload {
-    background-color: rgba(76, 189, 102, 0.87);
-    justify-items: center;
+  width: 100%;
+  background-color: #f3f3f3;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background: linear-gradient(to bottom, #76b852, #ffcd48);
+
+}
+
+.gallery-upload input{
+  padding-top: 10px;
+  padding-bottom: 10px;
+
 }
