@@ -45,7 +45,7 @@ var quotes =[
     'We must be willing to let go of the life we planned so as to have the life that is waiting for us.  <br>- Joseph Campbell',
     'Don\'t wait. The time will never be just right. <br>- Napoleon Hill',
     'Some people look for a beautiful place. Others make a place beautiful.  <br>- Hazrat Inayat Khan',
-    'OO alam ko pogi ako  <br>- Jodeyne Teneza',
+    'Curiosity is the key to knowledge   <br>- Jodeyne Teneza',
 
 
 
